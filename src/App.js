@@ -1,14 +1,13 @@
-import React from 'react'
-import EmployeeDirectory from './components/EmployeeDirectory';
-
+import React from "react";
+import EmployeeDirectory from "./components/EmployeeDirectory";
 
 function App() {
   return (
     <>
       {}
-       <EmployeeDirectory/>
+      <EmployeeDirectory />
     </>
-  )
+  );
 }
-
+export const backexdnURI = "https://fine-ahead-muscari.glitch.me/graphql";
 export default App;

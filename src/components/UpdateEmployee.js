@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { useNavigate, useParams } from 'react-router-dom';
 import { Snackbar } from "@mui/material";
 import { Alert } from "@mui/material";
+import { backexdnURI } from '../App';
 
 
 function UpdateEmployee(props) {
@@ -37,7 +38,7 @@ function UpdateEmployee(props) {
 
   async function fetchData() {
     try {
-      const response = await fetch('http://localhost:4000/graphql', {
+      const response = await fetch(backexdnURI, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Snackbar } from "@mui/material";
 import { Alert } from "@mui/material";
 import './css/Form.css'
+import { backexdnURI } from "../App";
 
 
 
@@ -79,7 +80,7 @@ function EmployeeCreate() {
           setErrMessage("Manager, Director and VP can't be a Contract or Seasonal Employee.")
           setOpen(true);
         } else {
-          await fetch('http://localhost:4000/graphql', {
+          await fetch(backexdnURI, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
@@ -97,7 +98,7 @@ function EmployeeCreate() {
         }
       } else {
 
-        await fetch('http://localhost:4000/graphql', {
+        await fetch(backexdnURI, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({
